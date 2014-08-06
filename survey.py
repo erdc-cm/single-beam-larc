@@ -42,3 +42,11 @@ def test_survey_row_to_dict():
     d2 = survey_row_to_dict(test_row2)
     test_d2 = {'id': 39, 'line_number': 163, 'x': 227.22, 'z': -2.423}
     nose.tools.eq_(d2, test_d2)
+
+def test_survey_class():
+    import nose
+    test_row1='39,167,745,36.181844395,-75.750374342,901874.364,274562.126,87.850,467.130,2.106,-36.762,20120214,140811,50891.383'
+    sd=SurveyDict()
+    sd.insert_row(test_row1)
+    test_sd={167: [(87.85, 2.106)]}
+    nose.tools.eq_(sd.lines,test_sd)
