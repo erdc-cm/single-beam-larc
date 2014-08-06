@@ -1,0 +1,14 @@
+language: python
+python:
+  - 2.7
+
+before_install:
+  - git config --global user.email "hashdist@h.com";
+    git config --global user.name "Hashdist"
+script:
+  - VERBOSE=1 nosetests -v -s *.py
+branches:
+  only:
+    - master
+notifications:
+  email: false
