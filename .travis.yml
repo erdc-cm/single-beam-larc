@@ -3,10 +3,10 @@ python:
   - 2.7
 
 before_install:
-  - git config --global user.email "hashdist@h.com";
-    git config --global user.name "Hashdist"
+  - git config --global user.email "surfer@frf.mil";
+    git config --global user.name "surfer"
 script:
-  - VERBOSE=1 nosetests -v -s *.py
+  - VERBOSE=1 nosetests -v -s
 branches:
   only:
     - master
