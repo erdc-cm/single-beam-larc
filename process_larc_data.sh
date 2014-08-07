@@ -4,9 +4,10 @@
 
 unpack() {
   unzip FRF_2012_ProfileSurvey_Data.zip
-  mkdir survey
-  mv FRF_FRF_2012_* survey
-  cd survey
+  mkdir data
+  mv FRF_FRF_2012_* data
+  rmdir FRF_2012_ProfileSurvey_Data
+  cd data
 }
 
 rename() {
@@ -20,4 +21,5 @@ rename() {
   done
 }
 
+unpack
 rename
